@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashant Bank</title>
+  <style>
+      /* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #1e3c72;
+}
+
+.service-card, .account-card {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+button {
+  background: #1e3c72;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #2a5298;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+}
+
+footer {
+  background: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+  </style>
+  <script>
+      // Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Scroll to a specific section
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+}
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#accounts">Accounts</a></li>
+        <li><a href="#transactions">Transactions</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.jsp">Login</a></li>
+        <li><a href="signup.jsp">Signup</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome to Prashant Bank</h1>
+    <p>Your trusted partner in financial management.</p>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Welcome to Prashant Bank, where innovation meets security. Manage your finances effortlessly with our cutting-edge banking solutions.</p>
+    <button onclick="scrollToSection('services')">Explore Services</button>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="service-card">
+      <h3>Online Banking</h3>
+      <p>Access your accounts anytime, anywhere with our secure online banking platform.</p>
+    </div>
+    <div class="service-card">
+      <h3>Loans & Mortgages</h3>
+      <p>Get competitive rates on loans and mortgages tailored to your needs.</p>
+    </div>
+    <div class="service-card">
+      <h3>Investment Plans</h3>
+      <p>Grow your wealth with our expert investment advice and plans.</p>
+    </div>
+  </section>
+
+  <section id="accounts">
+    <h2>Account Management</h2>
+    <p>View and manage your accounts with ease. Check balances, transfer funds, and more.</p>
+    <div class="account-card">
+      <h3>Savings Account</h3>
+      <p>Balance: $10,000</p>
+    </div>
+    <div class="account-card">
+      <h3>Checking Account</h3>
+      <p>Balance: $5,000</p>
+    </div>
+  </section>
+
+  <section id="transactions">
+    <h2>Transaction History</h2>
+    <p>Review your recent transactions and download statements.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2023-10-01</td>
+          <td>Grocery Store</td>
+          <td>-$50.00</td>
+        </tr>
+        <tr>
+          <td>2023-10-02</td>
+          <td>Salary Deposit</td>
+          <td>+$2,000.00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to our support team 24/7.</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Prashant Bank. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

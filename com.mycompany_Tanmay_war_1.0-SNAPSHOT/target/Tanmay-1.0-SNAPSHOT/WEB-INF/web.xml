@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.mycompany.tanmay.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>withdraw</servlet-name>
+        <servlet-class>bank.withdraw</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>wIthdrawServlet</servlet-name>
+        <servlet-class>bank.wIthdrawServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>withdraw</servlet-name>
+        <url-pattern>/withdraw</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>wIthdrawServlet</servlet-name>
+        <url-pattern>/wIthdrawServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
